@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Find internships and entry-level jobs with Talent Buddy.">
+    <title>Talent Buddy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <i class="fa-solid fa-briefcase"></i>
+                <span>Talent Buddy</span>
+            </div>
+            <nav>
+                <button id="nav-home" class="active">Explore</button>
+                <button id="nav-saved">Saved <span id="saved-count" class="badge">0</span></button>
+            </nav>
+        </header>
+
+        <section class="hero">
+            <h1>Find Your <span class="highlight">Next Opportunity</span></h1>
+            <p>Direct access to internships and entry-level roles.</p>
+
+            <div class="search-box">
+                <div class="input-wrapper">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" id="search-input" placeholder="Job title, keywords, or company...">
+                </div>
+                <div class="input-wrapper">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <input type="text" id="location-input" placeholder="Location (e.g. Remote, NY)">
+                </div>
+                <button id="search-btn">Search</button>
+            </div>
+
+            <div class="filters">
+                <span>Filters:</span>
+                <button class="chip" data-filter="level" data-value="Internship">Internship</button>
+                <button class="chip" data-filter="level" data-value="Entry Level">Entry Level</button>
+                <button class="chip" data-filter="location" data-value="Flexible / Remote">Remote</button>
+                <button class="chip" data-filter="category" data-value="Software Engineering">Software
+                    Engineering</button>
+                <button class="chip" data-filter="category" data-value="Data Science">Data Science</button>
+            </div>
+        </section>
+
+        <main>
+            <div class="results-header">
+                <h2 id="section-title">Latest Opportunities</h2>
+                <select id="sort-select">
+                    <option value="newest">Newest First</option>
+                    <option value="a-z">Company (A-Z)</option>
+                </select>
+            </div>
+
+            <div id="loading" class="hidden">
+                <div class="spinner"></div>
+                <p>Loading...</p>
+            </div>
+
+            <div id="jobs-grid" class="grid"></div>
+
+            <div id="no-results" class="hidden">
+                <p>No jobs found. Try adjusting your filters.</p>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 Talent Buddy.</p>
+        </footer>
+    </div>
+
+    <div id="saved-modal" class="modal hidden">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Your Library</h2>
+                <button id="close-modal"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div id="saved-list"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
