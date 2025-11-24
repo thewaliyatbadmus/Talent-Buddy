@@ -26,10 +26,14 @@ cp script.js /var/www/html/talent-buddy/
 
 # 4. Configure Nginx
 echo "Configuring Nginx..."
+# Ensure permissions are correct
+chown -R www-data:www-data /var/www/html/talent-buddy
+chmod -R 755 /var/www/html/talent-buddy
+
 cat > /etc/nginx/sites-available/talent-buddy <<EOF
 server {
     listen 80;
-    server_name _;
+    server_name thewaliyatbadmus.tech www.thewaliyatbadmus.tech;
 
     root /var/www/html/talent-buddy;
     index index.html;

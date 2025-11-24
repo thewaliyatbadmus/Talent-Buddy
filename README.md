@@ -3,7 +3,8 @@
 Talent Buddy is a simple, clean web application designed to help students and junior developers find internships and entry-level jobs. It pulls live data from *The Muse API* to show real opportunities, allowing users to search, filter, and save the jobs they like.
 
 I built this project to solve a real problem: job boards are often cluttered and overwhelming. Talent Buddy focuses strictly on early-career roles with a minimalist black-and-white design that's easy on the eyes.
-
+Youtube Demo - https://youtu.be/0ohvDw6XgnA
+[IMPORTANT!] Github page - https://thewaliyatbadmus.github.io/Talent-Buddy/
 Webserver 1 link - http://44.202.126.6/
 Webserver 2 link - http://44.212.13.223/
 Load balancer link - http://3.94.80.193/
