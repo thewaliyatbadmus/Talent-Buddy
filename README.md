@@ -90,3 +90,4 @@ When I first tried to deploy, I tried to `scp` my files directly into `/var/www/
 The API is great, but it has some limitations on how complex the search queries can be. I wanted users to be able to search *and* filter by location at the same time.
 Solution: I implemented the filtering logic in JavaScript (`script.js`). I fetch the relevant jobs first, and then use the `.filter()` method to narrow them down based on what the user typed or clicked.
 
+3. The API is limited to 500 responses per hour because the app is not registered. since it was just a mini project of playing around with APIs, I felt like it's better to stick to the free version. 
